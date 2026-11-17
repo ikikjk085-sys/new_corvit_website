@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corvit Systems Peshawar | IT Training in Networking, Cyber Security, Cloud &amp; Software</title>
+  <meta name="description" content="Launch your IT career in Peshawar. Hands-on training in Cisco networking, cyber security, cloud computing, web &amp; AI development, data science and freelancing, with certification prep and career counselling." />
+  <meta name="theme-color" content="#0A1A3A" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Corvit Systems Peshawar | IT Training Institute" />
+  <meta property="og:description" content="Industry-recognised IT certifications, hands-on labs and an AI Advisor to answer your admission questions." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1A3A'/%3E%3Cpath d='M42 22a14 14 0 1 0 0 20' fill='none' stroke='%2322D3EE' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            navy: { 950: '#060E22', 900: '#0A1A3A', 800: '#0F2550', 700: '#16336B' },
+            royal: { DEFAULT: '#2563EB', dark: '#1D4ED8' },
+            aqua: { DEFAULT: '#22D3EE', dark: '#06B6D4' }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    body { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #22D3EE; outline-offset: 2px; border-radius: 6px; }
+    .sr-only-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; background: #fff; color: #0A1A3A; padding: .6rem 1rem; border-radius: .5rem; font-weight: 700; }
+    .sr-only-link:focus { top: 1rem; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: .75rem; font-weight: 700; font-size: .92rem; line-height: 1.2; padding: .75rem 1.25rem; cursor: pointer; text-align: center; transition: background-color .2s, transform .15s, border-color .2s, box-shadow .2s; }
+    .btn:active { transform: translateY(1px); }
+    .btn-lg { padding: .95rem 1.6rem; font-size: 1rem; }
+    .btn-sm { padding: .55rem 1rem; font-size: .85rem; }
+    .btn-aqua { background: #22D3EE; color: #0A1A3A; box-shadow: 0 8px 24px -8px rgba(34,211,238,.6); }
+    .btn-aqua:hover { background: #67E8F9; }
+    .btn-royal { background: #2563EB; color: #fff; box-shadow: 0 8px 24px -8px rgba(37,99,235,.6); }
+    .btn-royal:hover { background: #1D4ED8; }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.35); color: #fff; background: rgba(255,255,255,.04); }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.6); }
+    .btn-outline { border: 1.5px solid #CBD5E1; color: #0A1A3A; background: #fff; }
+    .btn-outline:hover { border-color: #2563EB; color: #2563EB; background: #EFF6FF; }
+
+    /* Nav */
+    .nav-link { font-size: .9rem; font-weight: 600; color: #CBD5E1; transition: color .2s; }
+    .nav-link:hover, .nav-link[aria-current="true"] { color: #22D3EE; }
+    .mobile-link { display: block; padding: .8rem .75rem; border-radius: .6rem; font-weight: 600; color: #E2E8F0; }
+    .mobile-link:hover { background: rgba(255,255,255,.08); color: #fff; }
+
+    /* Hero */
+    .hero-bg {
+      background-color: #0A1A3A;
+      background-image:
+        radial-gradient(800px 480px at 90% -10%, rgba(37,99,235,.5), transparent 60%),
+        radial-gradient(600px 400px at 0% 100%, rgba(34,211,238,.18), transparent 60%),
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: auto, auto, 40px 40px, 40px 40px;
+    }
+    .cursor { display: inline-block; width: .55em; height: 1.05em; vertical-align: -.15em; background: #22D3EE; animation: blink 1s steps(2, start) infinite; }
+    @keyframes blink { to { visibility: hidden; } }
+
+    /* Cards */
+    .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #2563EB; }
+    .course-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #E2E8F0; border-radius: 1.25rem; padding: 1.5rem; transition: transform .25s, box-shadow .25s, border-color .25s; }
+    .course-card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -22px rgba(10,26,58,.35); border-color: #93C5FD; }
+    .icon-tile { display: inline-flex; height: 3rem; width: 3rem; align-items: center; justify-content: center; border-radius: .9rem; background: linear-gradient(135deg, #DBEAFE, #CFFAFE); color: #1D4ED8; }
+    .tag { display: inline-block; font-size: .72rem; font-weight: 600; color: #334155; background: #F1F5F9; border: 1px solid #E2E8F0; padding: .2rem .55rem; border-radius: 9999px; }
+    .why-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 1.25rem; padding: 1.5rem; transition: background .25s, border-color .25s; }
+    .why-card:hover { background: rgba(255,255,255,.07); border-color: rgba(34,211,238,.45); }
+    .step-num { display: inline-flex; height: 2.25rem; width: 2.25rem; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 9999px; background: #22D3EE; color: #0A1A3A; font-weight: 800; }
+    .footer-link { color: #94A3B8; transition: color .2s; }
+    .footer-link:hover { color: #fff; }
+
+    /* ---------- Chat UI (shared by the page section and the floating drawer) ---------- */
+    .chat-shell { display: flex; flex-direction: column; min-height: 0; }
+    .chat-head { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; background: linear-gradient(135deg, #0A1A3A, #16336B); color: #fff; }
+    .chat-head .avatar { height: 2.4rem; width: 2.4rem; font-size: .8rem; }
+    .chat-head-btn { display: inline-flex; align-items: center; gap: .35rem; height: 2.1rem; padding: 0 .65rem; border-radius: .6rem; font-size: .78rem; font-weight: 600; color: #E2E8F0; background: rgba(255,255,255,.1); transition: background .2s; }
+    .chat-head-btn:hover { background: rgba(255,255,255,.2); }
+    .chat-messages { position: relative; flex: 1; min-height: 0; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .75rem; background: #F8FAFC; overscroll-behavior: contain; }
+    .msg { display: flex; gap: .5rem; align-items: flex-end; max-width: 100%; }
+    .msg-user { justify-content: flex-end; }
+    .avatar { height: 1.75rem; width: 1.75rem; flex-shrink: 0; border-radius: 9999px; background: linear-gradient(135deg, #2563EB, #06B6D4); color: #fff; display: grid; place-items: center; font-size: .68rem; font-weight: 800; }
+    .bubble { max-width: 86%; border-radius: 1rem; padding: .65rem .9rem; font-size: .9rem; line-height: 1.55; overflow-wrap: anywhere; }
+    .msg-bot .bubble { background: #fff; color: #1E293B; border: 1px solid #E2E8F0; border-bottom-left-radius: .3rem; }
+    .msg-user .bubble { background: #2563EB; color: #fff; border-bottom-right-radius: .3rem; white-space: pre-wrap; }
+    .msg-error .bubble { background: #FEF2F2; border-color: #FECACA; color: #991B1B; }
+    .err-code { display: block; margin-top: .35rem; font-size: .72rem; opacity: .75; }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; padding-left: 2.25rem; }
+    .chip { border: 1.5px solid #93C5FD; background: #EFF6FF; color: #1D4ED8; font-size: .8rem; font-weight: 600; padding: .4rem .8rem; border-radius: 9999px; cursor: pointer; text-align: left; transition: background .2s, border-color .2s; }
+    .chip:hover { background: #DBEAFE; border-color: #2563EB; }
+    .chat-form { display: flex; align-items: flex-end; gap: .5rem; padding: .75rem; border-top: 1px solid #E2E8F0; background: #fff; }
+    .chat-input { flex: 1; resize: none; max-height: 120px; border: 1.5px solid #CBD5E1; border-radius: .8rem; padding: .6rem .85rem; font-size: .92rem; line-height: 1.4; color: #0F172A; background: #fff; }
+    .chat-input::placeholder { color: #94A3B8; }
+    .chat-input:focus { outline: none; border-color: #2563EB; box-shadow: 0 0 0 4px rgba(37,99,235,.15); }
+    .chat-send { display: inline-flex; height: 2.6rem; width: 2.6rem; flex-shrink: 0; align-items: center; justify-content: center; border-radius: .8rem; background: #2563EB; color: #fff; transition: background .2s, opacity .2s; }
+    .chat-send:hover:not(:disabled) { background: #1D4ED8; }
+    .chat-send:disabled { opacity: .45; cursor: not-allowed; }
+    .chat-note { margin: 0; padding: 0 .75rem .6rem; background: #fff; font-size: .7rem; color: #64748B; text-align: center; }
+    .typing { display: inline-flex; align-items: center; gap: .3rem; padding: .85rem 1rem; }
+    .typing span { height: .45rem; width: .45rem; border-radius: 9999px; background: #94A3B8; animation: bounce 1.2s infinite ease-in-out; }
+    .typing span:nth-child(2) { animation-delay: .15s; }
+    .typing span:nth-child(3) { animation-delay: .3s; }
+    @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+    /* Markdown inside bot bubbles */
+    .md > :first-child { margin-top: 0; }
+    .md > :last-child { margin-bottom: 0; }
+    .md p { margin: .5rem 0; }
+    .md .md-h { font-weight: 700; color: #0A1A3A; margin: .75rem 0 .25rem; }
+    .md ul { list-style: disc; padding-left: 1.2rem; margin: .5rem 0; }
+    .md ol { list-style: decimal; padding-left: 1.3rem; margin: .5rem 0; }
+    .md li { margin: .2rem 0; padding-left: .1rem; }
+    .md strong { font-weight: 700; color: #0F172A; }
+    .md a { color: #2563EB; text-decoration: underline; text-underline-offset: 2px; }
+    .md code { background: #F1F5F9; padding: .1rem .35rem; border-radius: .3rem; font-size: .85em; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .md pre { background: #0F172A; color: #E2E8F0; padding: .75rem; border-radius: .6rem; overflow-x: auto; font-size: .8rem; margin: .5rem 0; }
+    .md pre code { background: none; padding: 0; color: inherit; }
+    .md blockquote { border-left: 3px solid #22D3EE; padding-left: .75rem; color: #475569; margin: .5rem 0; }
+    .md hr { border: 0; border-top: 1px solid #E2E8F0; margin: .75rem 0; }
+    .md .table-wrap { overflow-x: auto; margin: .5rem 0; }
+    .md table { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
+    .md th, .md td { border: 1px solid #E2E8F0; padding: .35rem .6rem; text-align: left; vertical-align: top; }
+    .md th { background: #F1F5F9; font-weight: 700; }
+
+    /* Embedded chat card on the page */
+    .chat-card { height: 600px; max-height: 80dvh; border-radius: 1.5rem; overflow: hidden; background: #fff; box-shadow: 0 30px 70px -20px rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.15); }
+
+    /* Floating launcher + drawer (bottom-right) */
+    .chat-launcher { position: fixed; right: 1rem; bottom: 1rem; z-index: 60; display: inline-flex; align-items: center; gap: .6rem; height: 3.5rem; padding: 0 1.1rem; border-radius: 9999px; background: linear-gradient(135deg, #2563EB, #06B6D4); color: #fff; font-weight: 700; font-size: .9rem; box-shadow: 0 14px 34px -8px rgba(37,99,235,.7); transition: transform .2s, box-shadow .2s; }
+    .chat-launcher:hover { transform: translateY(-2px); }
+    .chat-launcher .ico-close { display: none; }
+    .chat-launcher[aria-expanded="true"] .ico-chat { display: none; }
+    .chat-launcher[aria-expanded="true"] .ico-close { display: block; }
+    .chat-launcher[aria-expanded="true"] .launcher-label { display: none; }
+    .chat-launcher[aria-expanded="true"] { padding: 0; width: 3.5rem; justify-content: center; }
+    .chat-drawer { position: fixed; right: 1rem; bottom: 5.5rem; z-index: 60; width: 24rem; height: min(36rem, calc(100dvh - 7.5rem)); border-radius: 1.25rem; overflow: hidden; background: #fff; border: 1px solid #CBD5E1; box-shadow: 0 30px 70px -15px rgba(10,26,58,.55); animation: drawerIn .22s ease; }
+    .chat-drawer[hidden] { display: none; }
+    @keyframes drawerIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+    @media (max-width: 640px) {
+      .chat-launcher { right: .75rem; bottom: .75rem; padding: 0; width: 3.5rem; justify-content: center; }
+      .chat-launcher .launcher-label { display: none; }
+      .chat-drawer { left: .75rem; right: .75rem; width: auto; bottom: 5rem; height: calc(100dvh - 6.25rem); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-slate-700 antialiased">
+  <a href="#main" class="sr-only-link">Skip to content</a>
+
+  <!-- ============ STICKY NAVIGATION ============ -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-navy-950/90 backdrop-blur-lg">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <a href="#home" class="flex items-center gap-3 text-white" aria-label="Corvit Systems Peshawar, home">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-800 ring-1 ring-white/15">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 text-aqua" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M17 8a6.5 6.5 0 1 0 0 8"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-[15px] font-bold tracking-tight">Corvit Systems</span>
+          <span class="block text-[11px] font-semibold uppercase tracking-[.2em] text-aqua">Peshawar</span>
+        </span>
+      </a>
+
+      <ul class="hidden items-center gap-8 lg:flex">
+        <li><a data-nav class="nav-link" href="#courses">Courses</a></li>
+        <li><a data-nav class="nav-link" href="#about">About</a></li>
+        <li><a data-nav class="nav-link" href="#admissions">Admissions</a></li>
+        <li><a data-nav class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <button type="button" data-open-chat class="btn btn-aqua btn-sm hidden sm:inline-flex">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.4-.2-3.4-.6L3 21l1.6-4.4C3.6 15.2 3 13.7 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+          Chat with AI Advisor
+        </button>
+        <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg id="icon-open" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy-950 lg:hidden">
+      <ul class="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
+        <li><a data-nav class="mobile-link" href="#courses">Courses</a></li>
+        <li><a data-nav class="mobile-link" href="#about">About</a></li>
+        <li><a data-nav class="mobile-link" href="#admissions">Admissions</a></li>
+        <li><a data-nav class="mobile-link" href="#contact">Contact</a></li>
+        <li class="pt-2"><button type="button" data-open-chat class="btn btn-aqua w-full">Chat with AI Advisor</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero-bg relative overflow-hidden text-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 sm:pt-20 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-28 lg:pt-24">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-cyan-200">
+            <span class="h-2 w-2 rounded-full bg-aqua"></span> IT training institute in Peshawar
+          </span>
+          <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+            Launch your <span class="text-aqua">IT career</span> in Peshawar with industry-recognised certifications.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+            Learn networking, cyber security, cloud, software and data skills in hands-on labs, guided by certified instructors and backed by career counselling.
+          </p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#courses" class="btn btn-aqua btn-lg">
+              Explore Courses
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <button type="button" data-open-chat class="btn btn-ghost btn-lg">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.4-.2-3.4-.6L3 21l1.6-4.4C3.6 15.2 3 13.7 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+              Ask AI Course Advisor
+            </button>
+          </div>
+          <ul class="mt-9 flex flex-wrap gap-2" aria-label="Certification tracks">
+            <li class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">CCNA / CCNP</li>
+            <li class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">AWS</li>
+            <li class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">Microsoft Azure</li>
+            <li class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">Ethical Hacking</li>
+            <li class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200">Python &amp; AI</li>
+          </ul>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-lg lg:max-w-none" aria-hidden="true">
+          <div class="absolute -inset-6 rounded-[2rem] bg-royal/25 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-2xl border border-white/15 bg-navy-950/80 shadow-2xl backdrop-blur">
+            <div class="flex items-center gap-1.5 border-b border-white/10 bg-white/5 px-4 py-3">
+              <span class="h-3 w-3 rounded-full bg-red-400/80"></span><span class="h-3 w-3 rounded-full bg-amber-400/80"></span><span class="h-3 w-3 rounded-full bg-emerald-400/80"></span>
+              <span class="ml-3 text-xs font-medium text-slate-400">lab-session: network-core-01</span>
+            </div>
+<pre class="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed text-slate-300"><span class="text-aqua">student@corvit-lab</span>:<span class="text-blue-300">~</span>$ show ip interface brief
+Interface        Status    Protocol
+Gi0/0            up        up
+Gi0/1            up        up
+Vlan10           up        up
+
+<span class="text-aqua">student@corvit-lab</span>:<span class="text-blue-300">~</span>$ ./prepare --track "CCNA"
+<span class="text-emerald-300">&#10003;</span> Hands-on labs completed
+<span class="text-emerald-300">&#10003;</span> Mock exam ready
+<span class="text-amber-300">&gt;</span> Next: career counselling session <span class="cursor"></span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED COURSES ============ -->
+    <section id="courses" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="eyebrow">Featured Courses</p>
+        <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">Popular IT tracks to start your career</h2>
+        <p class="mt-4 text-lg text-slate-600">Not sure which one fits you? Tap "Ask AI about this course" on any card to get details on topics, fees, duration and timings.</p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Cisco Networking (CCNA / CCNP)</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Master routing, switching and enterprise networks on real lab equipment while preparing for Cisco certification exams.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">Routing &amp; Switching</span><span class="tag">VLANs</span><span class="tag">Exam prep</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Cisco Networking (CCNA / CCNP)">Ask AI about this course</button>
+        </article>
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 8 8 9 4.8-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Cyber Security &amp; Ethical Hacking</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Learn how attacks work and how to defend against them, practising penetration testing and defence in safe lab environments.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">Pen testing</span><span class="tag">Network security</span><span class="tag">Labs</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Cyber Security &amp; Ethical Hacking">Ask AI about this course</button>
+        </article>
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9.5 4.5 4.5 0 0 1 17.5 18z"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Cloud Computing (AWS / Azure)</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Design, deploy and manage cloud infrastructure, and get ready for the leading cloud certification exams.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Cloud fundamentals</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Cloud Computing (AWS / Azure)">Ask AI about this course</button>
+        </article>
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Full-Stack Web &amp; AI Development</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Build modern web applications from front end to back end and add AI features to the products you create.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">HTML / CSS / JS</span><span class="tag">APIs</span><span class="tag">AI tools</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Full-Stack Web &amp; AI Development">Ask AI about this course</button>
+        </article>
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Data Science &amp; Python</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Analyse data, build visualisations and create machine-learning models using Python and the tools data teams rely on.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">Analytics</span><span class="tag">Machine learning</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Data Science &amp; Python">Ask AI about this course</button>
+        </article>
+
+        <article class="course-card">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l8 4V6L6 10H4a1 1 0 0 0-1 1zM18 9a4 4 0 0 1 0 6"/></svg></span>
+          <h3 class="mt-4 font-display text-xl font-bold text-navy-900">Digital Marketing &amp; Freelancing</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Learn to market online and start earning with in-demand freelance skills, from finding clients to delivering great work.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tag">SEO &amp; ads</span><span class="tag">Social media</span><span class="tag">Freelancing</span></div>
+          <button type="button" class="btn btn-outline mt-5 w-full" data-ask="Digital Marketing &amp; Freelancing">Ask AI about this course</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE CORVIT PESHAWAR ============ -->
+    <section id="about" class="hero-bg text-white">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[.14em] text-aqua">Why Choose Corvit Peshawar</p>
+          <h2 class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Skills you can prove, support you can count on</h2>
+          <p class="mt-4 text-lg text-slate-300">We focus on practical training that prepares you for the certifications and the job interviews that come next.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="why-card">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/></svg></span>
+            <h3 class="mt-4 font-display text-lg font-bold">Hands-on Labs</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Practise on real equipment and virtual lab environments, so concepts turn into skills you can use at work.</p>
+          </article>
+          <article class="why-card">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></span>
+            <h3 class="mt-4 font-display text-lg font-bold">Certified Instructors</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Learn from instructors who hold the certifications they teach and bring real-world experience to every class.</p>
+          </article>
+          <article class="why-card">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
+            <h3 class="mt-4 font-display text-lg font-bold">Career Counselling</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Get guidance on choosing the right track, building your CV and preparing for interviews or freelance work.</p>
+          </article>
+          <article class="why-card">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+            <h3 class="mt-4 font-display text-lg font-bold">Global Certification Prep</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Training aligned with internationally recognised vendor certifications that employers look for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADMISSIONS + EMBEDDED AI CHATBOT ============ -->
+    <section id="admissions" class="bg-slate-100">
+      <div class="mx-auto grid max-w-7xl items-start gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <div>
+          <p class="eyebrow">Admissions &amp; AI Advisor</p>
+          <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">Get answers about fees, schedules and admission, any time</h2>
+          <p class="mt-4 text-lg text-slate-600">Our AI Advisor can explain course outlines, class timings and how to apply. For final fees and dates, the admissions office will confirm everything with you.</p>
+
+          <ol class="mt-8 space-y-6">
+            <li class="flex gap-4"><span class="step-num">1</span><div><h3 class="font-bold text-navy-900">Choose your track</h3><p class="text-sm text-slate-600">Browse the courses or ask the AI Advisor which one suits your goals.</p></div></li>
+            <li class="flex gap-4"><span class="step-num">2</span><div><h3 class="font-bold text-navy-900">Talk to admissions</h3><p class="text-sm text-slate-600">Visit the campus or call us to confirm fees, batches and start dates.</p></div></li>
+            <li class="flex gap-4"><span class="step-num">3</span><div><h3 class="font-bold text-navy-900">Submit your documents</h3><p class="text-sm text-slate-600">Complete the registration form and the admission formalities.</p></div></li>
+            <li class="flex gap-4"><span class="step-num">4</span><div><h3 class="font-bold text-navy-900">Start learning</h3><p class="text-sm text-slate-600">Join your batch, get lab access and begin your certification journey.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="chat-card chat-shell" id="chat-embedded" role="region" aria-label="Corvit Peshawar AI Advisor">
+          <div class="chat-head">
+            <span class="avatar" aria-hidden="true">AI</span>
+            <div class="min-w-0 flex-1 leading-tight">
+              <p class="truncate text-sm font-bold">Corvit Peshawar AI Advisor</p>
+              <p class="truncate text-xs text-cyan-200">Courses, fees, schedules &amp; admissions</p>
+            </div>
+            <button type="button" class="chat-head-btn" data-reset-chat aria-label="Start a new chat">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+              New chat
+            </button>
+          </div>
+          <div id="chat-embedded-host" class="chat-shell min-h-0 flex-1">
+            <noscript><p class="p-4 text-sm text-slate-600">Please enable JavaScript to chat with the AI Advisor.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ CAMPUS INFO & FOOTER ============ -->
+  <footer id="contact" class="bg-navy-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 lg:px-8">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <a href="#home" class="flex items-center gap-3 text-white">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-800 ring-1 ring-white/15">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-aqua" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M17 8a6.5 6.5 0 1 0 0 8"/></svg>
+            </span>
+            <span class="leading-tight"><span class="block font-display text-[15px] font-bold">Corvit Systems</span><span class="block text-[11px] font-semibold uppercase tracking-[.2em] text-aqua">Peshawar</span></span>
+          </a>
+          <p class="mt-5 text-sm leading-relaxed text-slate-400">IT training in networking, cyber security, cloud computing and software development, for students and professionals in Peshawar.</p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Quick Links</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="footer-link" href="#home">Home</a></li>
+            <li><a class="footer-link" href="#courses">Courses</a></li>
+            <li><a class="footer-link" href="#about">Why Corvit Peshawar</a></li>
+            <li><a class="footer-link" href="#admissions">Admissions &amp; AI Advisor</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Campus</h3>
+          <ul class="mt-4 space-y-4 text-sm">
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-aqua" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <span>Corvit Systems Peshawar<br />University Road, near Phase 3 Chowk,<br />Peshawar, Khyber Pakhtunkhwa, Pakistan<br /><a class="mt-1 inline-block font-semibold text-aqua hover:underline" href="https://www.google.com/maps/search/?api=1&amp;query=Corvit+Systems+Peshawar" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-aqua" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Monday to Saturday<br />9:00 AM to 6:00 PM</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h3>
+          <ul class="mt-4 space-y-4 text-sm">
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-aqua" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a class="footer-link" href="tel:+920000000000">+92 000 0000000</a></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-aqua" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a class="footer-link" href="mailto:admissions@example.com">admissions@example.com</a></li>
+            <li><button type="button" data-open-chat class="btn btn-aqua btn-sm">Chat with AI Advisor</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row">
+        <p>&copy; <span id="year">2026</span> Corvit Systems Peshawar. All rights reserved.</p>
+        <p>AI Advisor replies are informational. Please confirm fees and dates with the admissions office.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CHAT WIDGET ============ -->
+  <button id="chat-launcher" type="button" class="chat-launcher" aria-expanded="false" aria-controls="chat-drawer" aria-label="Chat with the AI Advisor">
+    <svg class="ico-chat h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.4-.2-3.4-.6L3 21l1.6-4.4C3.6 15.2 3 13.7 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+    <svg class="ico-close h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    <span class="launcher-label">Ask AI Advisor</span>
+  </button>
+
+  <div id="chat-drawer" class="chat-drawer chat-shell" role="dialog" aria-label="Corvit Peshawar AI Advisor chat" hidden>
+    <div class="chat-head">
+      <span class="avatar" aria-hidden="true">AI</span>
+      <div class="min-w-0 flex-1 leading-tight">
+        <p class="truncate text-sm font-bold">Corvit Peshawar AI Advisor</p>
+        <p class="truncate text-xs text-cyan-200">Courses, fees, schedules &amp; admissions</p>
+      </div>
+      <button type="button" class="chat-head-btn" data-reset-chat aria-label="Start a new chat">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+        New chat
+      </button>
+      <button type="button" class="chat-head-btn" id="chat-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div id="chat-drawer-host" class="chat-shell min-h-0 flex-1"></div>
+  </div>
+
+  <!-- Shared chat body (messages + composer), cloned into the page section and the floating drawer -->
+  <template id="chat-template">
+    <div class="chat-messages" data-role="messages" role="log" aria-live="polite" aria-label="Conversation with the Corvit Peshawar AI Advisor"></div>
+    <form class="chat-form" data-role="form" autocomplete="off">
+      <textarea class="chat-input" data-role="input" rows="1" maxlength="1000" placeholder="Ask about fees, schedules, admissions…" aria-label="Your message"></textarea>
+      <button type="submit" class="chat-send" data-role="send" aria-label="Send message">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+      </button>
+    </form>
+    <p class="chat-note">AI can make mistakes. Please confirm fees and dates with the admissions office.</p>
+  </template>
+
+  <script>
+  (() => {
+    'use strict';
+
+    /* ======================================================================
+       Configuration
+       ====================================================================== */
+    const ENDPOINT = '/.netlify/functions/chat';
+    const REQUEST_TIMEOUT_MS = 40000;
+    const MAX_STORED_MESSAGES = 40;
+    const KEYS = { conv: 'corvit_conversation_id', msgs: 'corvit_messages', user: 'corvit_user_id' };
+
+    const WELCOME = "Assalam o Alaikum! 👋 I'm the **Corvit Peshawar AI Advisor**. I can help you with courses, fees, class timings and how to apply for admission. What would you like to know?";
+    const QUICK_PROMPTS = [
+      'What courses do you offer?',
+      'Tell me about CCNA & Networking',
+      'How do I apply for admission?',
+      'What are class timings?'
+    ];
+
+    const $  = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+    /* ======================================================================
+       Safe Markdown renderer (escapes all HTML first; only http/https/mailto/tel links)
+       ====================================================================== */
+    /* md:start */
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function inline(raw) {
+      const codes = [];
+      let s = escapeHtml(String(raw).replace(/\u0000/g, ''));
+      s = s.replace(/`([^`]+)`/g, (m, c) => { codes.push(c); return '\u0000' + (codes.length - 1) + '\u0000'; });
+      s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|mailto:[^\s)]+|tel:[^\s)]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+      s = s.replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g,
+        '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>');
+      s = s.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
+      s = s.replace(/__([^_]+?)__/g, '<strong>$1</strong>');
+      s = s.replace(/(^|[^*\w])\*([^*\s][^*]*?)\*(?!\*)/g, '$1<em>$2</em>');
+      s = s.replace(/\u0000(\d+)\u0000/g, (m, i) => '<code>' + codes[Number(i)] + '</code>');
+      return s;
+    }
+
+    function renderMarkdown(src) {
+      const lines = String(src == null ? '' : src).replace(/\r\n?/g, '\n').split('\n');
+      const out = [];
+      let para = [];
+      let i = 0;
+
+      const ulRe = /^\s*[-*•+]\s+(.*)$/;
+      const olRe = /^\s*\d+[.)]\s+(.*)$/;
+      const rowRe = /^\s*\|.*\|\s*$/;
+      const sepRe = /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/;
+      const flush = () => {
+        if (para.length) { out.push('<p>' + para.map(inline).join('<br>') + '</p>'); para = []; }
+      };
+      const cells = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+
+      while (i < lines.length) {
+        const line = lines[i];
+
+        if (/^\s*```/.test(line)) {
+          flush();
+          const buf = [];
+          i++;
+          while (i < lines.length && !/^\s*```/.test(lines[i])) { buf.push(lines[i]); i++; }
+          i++;
+          out.push('<pre><code>' + escapeHtml(buf.join('\n')) + '</code></pre>');
+          continue;
+        }
+
+        if (!line.trim()) { flush(); i++; continue; }
+
+        let m = line.match(/^\s{0,3}(#{1,6})\s+(.*)$/);
+        if (m) { flush(); out.push('<p class="md-h">' + inline(m[2].replace(/\s*#+\s*$/, '')) + '</p>'); i++; continue; }
+
+        if (/^\s*([-*_])\s*(\1\s*){2,}$/.test(line)) { flush(); out.push('<hr>'); i++; continue; }
+
+        if (rowRe.test(line) && i + 1 < lines.length && sepRe.test(lines[i + 1]) && lines[i + 1].indexOf('-') !== -1) {
+          flush();
+          const head = cells(line);
+          i += 2;
+          const body = [];
+          while (i < lines.length && rowRe.test(lines[i])) { body.push(cells(lines[i])); i++; }
+          out.push('<div class="table-wrap"><table><thead><tr>' +
+            head.map((c) => '<th>' + inline(c) + '</th>').join('') + '</tr></thead><tbody>' +
+            body.map((r) => '<tr>' + r.map((c) => '<td>' + inline(c) + '</td>').join('') + '</tr>').join('') +
+            '</tbody></table></div>');
+          continue;
+        }
+
+        if (/^\s*>/.test(line)) {
+          flush();
+          const buf = [];
+          while (i < lines.length && /^\s*>/.test(lines[i])) { buf.push(lines[i].replace(/^\s*>\s?/, '')); i++; }
+          out.push('<blockquote>' + buf.map(inline).join('<br>') + '</blockquote>');
+          continue;
+        }
+
+        const isUl = ulRe.test(line);
+        const isOl = !isUl && olRe.test(line);
+        if (isUl || isOl) {
+          flush();
+          const re = isUl ? ulRe : olRe;
+          const start = isOl ? Number(line.match(/^\s*(\d+)/)[1]) : 1;
+          const items = [];
+          while (i < lines.length) {
+            const l = lines[i];
+            if (re.test(l)) { items.push(l.match(re)[1]); i++; continue; }
+            if (!l.trim()) {
+              let j = i + 1;
+              while (j < lines.length && !lines[j].trim()) j++;
+              if (j < lines.length && re.test(lines[j])) { i = j; continue; }
+              break;
+            }
+            if (/^\s{2,}\S/.test(l) && items.length) {
+              items[items.length - 1] += '\n' + l.trim().replace(/^[-*•+]\s+|^\d+[.)]\s+/, '');
+              i++;
+              continue;
+            }
+            break;
+          }
+          const tag = isUl ? 'ul' : 'ol';
+          const startAttr = isOl && start !== 1 ? ' start="' + start + '"' : '';
+          out.push('<' + tag + startAttr + '>' +
+            items.map((t) => '<li>' + t.split('\n').map(inline).join('<br>') + '</li>').join('') +
+            '</' + tag + '>');
+          continue;
+        }
+
+        para.push(line.trim());
+        i++;
+      }
+      flush();
+      return out.join('');
+    }
+    /* md:end */
+
+    /* ======================================================================
+       Session storage helpers + shared chat state
+       ====================================================================== */
+    const store = {
+      get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+      set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } },
+      del(k) { try { sessionStorage.removeItem(k); } catch (e) { /* storage unavailable */ } }
+    };
+
+    function loadMessages() {
+      try {
+        const parsed = JSON.parse(store.get(KEYS.msgs) || '[]');
+        return Array.isArray(parsed)
+          ? parsed.filter((m) => m && (m.role === 'user' || m.role === 'bot') && typeof m.text === 'string')
+          : [];
+      } catch (e) { return []; }
+    }
+
+    function getUserId() {
+      let id = store.get(KEYS.user);
+      if (!id) {
+        const bytes = new Uint8Array(6);
+        (window.crypto || window.msCrypto).getRandomValues(bytes);
+        id = 'corvit-web-' + Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+        store.set(KEYS.user, id);
+      }
+      return id;
+    }
+
+    const state = {
+      messages: loadMessages(),
+      conversationId: store.get(KEYS.conv) || '',
+      userId: getUserId(),
+      loading: false,
+      generation: 0
+    };
+
+    function persist() {
+      const saved = state.messages.filter((m) => !m.error).slice(-MAX_STORED_MESSAGES);
+      store.set(KEYS.msgs, JSON.stringify(saved));
+      if (state.conversationId) store.set(KEYS.conv, state.conversationId); else store.del(KEYS.conv);
+    }
+
+    /* ======================================================================
+       Chat views (the embedded section + the floating drawer share one state)
+       ====================================================================== */
+    const views = [];
+
+    function botBubble(html, extraClass) {
+      return '<div class="msg msg-bot' + (extraClass ? ' ' + extraClass : '') + '"><span class="avatar" aria-hidden="true">AI</span>' + html + '</div>';
+    }
+
+    function render(view) {
+      const parts = [];
+      parts.push(botBubble('<div class="bubble md">' + renderMarkdown(WELCOME) + '</div>'));
+      if (!state.messages.length) {
+        parts.push('<div class="chips">' + QUICK_PROMPTS.map((p) =>
+          '<button type="button" class="chip" data-chip="' + escapeHtml(p) + '">' + escapeHtml(p) + '</button>').join('') + '</div>');
+      }
+      state.messages.forEach((m) => {
+        if (m.role === 'user') {
+          parts.push('<div class="msg msg-user"><div class="bubble">' + escapeHtml(m.text) + '</div></div>');
+        } else if (m.error) {
+          parts.push(botBubble('<div class="bubble">' + escapeHtml(m.text) +
+            (m.code ? '<span class="err-code">Error code: ' + escapeHtml(m.code) + '</span>' : '') + '</div>', 'msg-error'));
+        } else {
+          parts.push(botBubble('<div class="bubble md">' + renderMarkdown(m.text) + '</div>'));
+        }
+      });
+      if (state.loading) {
+        parts.push(botBubble('<div class="bubble typing" role="status" aria-label="The advisor is typing"><span></span><span></span><span></span></div>'));
+      }
+      view.messages.innerHTML = parts.join('');
+      scrollView(view);
+    }
+
+    function scrollView(view) {
+      const box = view.messages;
+      const last = box.querySelector('.msg:last-of-type');
+      const lastMsg = state.messages[state.messages.length - 1];
+      if (!state.loading && last && lastMsg && lastMsg.role === 'bot') {
+        box.scrollTop = Math.max(0, last.offsetTop - 12);
+      } else {
+        box.scrollTop = box.scrollHeight;
+      }
+    }
+
+    function renderAll() { views.forEach(render); }
+
+    function syncControls() {
+      views.forEach((v) => {
+        v.send.disabled = state.loading;
+        v.form.setAttribute('aria-busy', String(state.loading));
+      });
+    }
+
+    function autosize(textarea) {
+      textarea.style.height = 'auto';
+      textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
+    }
+
+    function mountView(host) {
+      host.appendChild($('#chat-template').content.cloneNode(true));
+      const view = {
+        host,
+        messages: $('[data-role="messages"]', host),
+        form: $('[data-role="form"]', host),
+        input: $('[data-role="input"]', host),
+        send: $('[data-role="send"]', host)
+      };
+
+      view.form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = view.input.value;
+        if (!text.trim() || state.loading) return;
+        view.input.value = '';
+        autosize(view.input);
+        sendMessage(text);
+      });
+
+      view.input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+          e.preventDefault();
+          view.form.requestSubmit();
+        }
+      });
+      view.input.addEventListener('input', () => autosize(view.input));
+
+      view.messages.addEventListener('click', (e) => {
+        const chip = e.target.closest('[data-chip]');
+        if (chip) sendMessage(chip.getAttribute('data-chip'));
+      });
+
+      views.push(view);
+      render(view);
+      return view;
+    }
+
+    /* ======================================================================
+       Talking to the Netlify Function
+       ====================================================================== */
+    async function callAdvisor(query) {
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+        let res;
+        try {
+          res = await fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query, conversation_id: state.conversationId, user: state.userId }),
+            signal: controller.signal
+          });
+        } catch (err) {
+          const e = new Error('network');
+          e.code = err && err.name === 'AbortError' ? 'timeout' : 'network';
+          throw e;
+        } finally {
+          clearTimeout(timer);
+        }
+
+        let data = null;
+        try { data = await res.json(); } catch (e) { data = null; }
+
+        if (res.ok && data && typeof data.answer === 'string') return data;
+
+        // The saved conversation expired on Dify's side: start fresh and retry once.
+        if (res.status === 404 && data && data.code === 'conversation_not_found' && state.conversationId) {
+          state.conversationId = '';
+          store.del(KEYS.conv);
+          continue;
+        }
+
+        const err = new Error((data && data.error) || 'Request failed');
+        err.code = (data && data.code) || 'http_' + res.status;
+        throw err;
+      }
+      const fail = new Error('Request failed');
+      fail.code = 'conversation_retry_failed';
+      throw fail;
+    }
+
+    function friendlyError(code) {
+      switch (code) {
+        case 'timeout': return 'The advisor is taking too long to answer. Please try again in a moment.';
+        case 'network': return "I couldn't connect right now. Please check your internet connection and try again.";
+        case 'upstream_rate_limited': return 'The advisor is very busy at the moment. Please try again shortly.';
+        case 'missing_api_key':
+        case 'upstream_auth_failed':
+        case 'invalid_base_url': return 'The AI Advisor is not available right now. Please contact the admissions office directly.';
+        default: return 'Sorry, something went wrong while getting your answer. Please try again, or contact the admissions office.';
+      }
+    }
+
+    async function sendMessage(text) {
+      const query = String(text || '').trim();
+      if (!query || state.loading) return;
+
+      const gen = state.generation;
+      state.messages.push({ role: 'user', text: query });
+      state.loading = true;
+      persist();
+      renderAll();
+      syncControls();
+
+      try {
+        const data = await callAdvisor(query);
+        if (gen !== state.generation) return;
+        if (data.conversation_id) state.conversationId = data.conversation_id;
+        state.messages.push({ role: 'bot', text: data.answer || "Sorry, I couldn't come up with an answer. Could you rephrase your question?" });
+      } catch (err) {
+        if (gen !== state.generation) return;
+        console.error('AI Advisor error:', err && err.code, err && err.message);
+        state.messages.push({ role: 'bot', error: true, text: friendlyError(err && err.code), code: err && err.code });
+      } finally {
+        if (gen === state.generation) {
+          state.loading = false;
+          persist();
+          renderAll();
+          syncControls();
+        }
+      }
+    }
+
+    function resetChat() {
+      state.generation++;
+      state.messages = [];
+      state.conversationId = '';
+      state.loading = false;
+      store.del(KEYS.msgs);
+      store.del(KEYS.conv);
+      renderAll();
+      syncControls();
+    }
+
+    /* ======================================================================
+       Mount the chat in the page section and in the floating drawer
+       ====================================================================== */
+    mountView($('#chat-embedded-host'));
+    const drawerView = mountView($('#chat-drawer-host'));
+    syncControls();
+
+    const drawer = $('#chat-drawer');
+    const launcher = $('#chat-launcher');
+
+    function isDrawerOpen() { return !drawer.hidden; }
+
+    function openChat(prefill) {
+      drawer.hidden = false;
+      launcher.setAttribute('aria-expanded', 'true');
+      launcher.setAttribute('aria-label', 'Close the AI Advisor chat');
+      render(drawerView);
+      if (typeof prefill === 'string' && prefill) {
+        drawerView.input.value = prefill;
+        autosize(drawerView.input);
+      }
+      drawerView.input.focus();
+      const end = drawerView.input.value.length;
+      drawerView.input.setSelectionRange(end, end);
+    }
+
+    function closeChat(returnFocus) {
+      drawer.hidden = true;
+      launcher.setAttribute('aria-expanded', 'false');
+      launcher.setAttribute('aria-label', 'Chat with the AI Advisor');
+      if (returnFocus) launcher.focus();
+    }
+
+    launcher.addEventListener('click', () => { isDrawerOpen() ? closeChat(false) : openChat(); });
+    $('#chat-close').addEventListener('click', () => closeChat(true));
+
+    document.addEventListener('click', (e) => {
+      const open = e.target.closest('[data-open-chat]');
+      if (open) { e.preventDefault(); closeMenu(); openChat(); return; }
+
+      const ask = e.target.closest('[data-ask]');
+      if (ask) {
+        e.preventDefault();
+        openChat('Tell me about the ' + ask.getAttribute('data-ask') + ' course: topics covered, duration, fees, class timings and admission requirements.');
+        return;
+      }
+
+      if (e.target.closest('[data-reset-chat]')) {
+        e.preventDefault();
+        resetChat();
+        if (isDrawerOpen()) drawerView.input.focus();
+      }
+    });
+
+    /* ======================================================================
+       Mobile menu, Escape key, scroll spy, footer year
+       ====================================================================== */
+    const menuToggle = $('#menu-toggle');
+    const mobileMenu = $('#mobile-menu');
+
+    function setMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      $('#icon-open').classList.toggle('hidden', open);
+      $('#icon-close').classList.toggle('hidden', !open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    function closeMenu() { setMenu(false); }
+
+    menuToggle.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    $$('a', mobileMenu).forEach((a) => a.addEventListener('click', closeMenu));
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) closeMenu(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (isDrawerOpen()) { closeChat(true); return; }
+      if (!mobileMenu.classList.contains('hidden')) { closeMenu(); menuToggle.focus(); }
+    });
+
+    if ('IntersectionObserver' in window) {
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          $$('[data-nav]').forEach((a) => a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + entry.target.id)));
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['courses', 'about', 'admissions', 'contact'].forEach((id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+    }
+
+    const year = $('#year');
+    if (year) year.textContent = String(new Date().getFullYear());
+  })();
+  </script>
+</body>
+</html>
